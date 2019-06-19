@@ -8,15 +8,15 @@ public class DiagonalDifference {
 		// Initialize sums of diagonals
 		int d1 = 0, d2 = 0;
 
-		for (int col = 0; col < n; col++) {
-			for (int row = 0; row < n; row++) {
+		for (int row = 0; row < n; row++) {
+			for (int col = 0; col < n; col++) {
 				// finding sum of primary diagonal
-				if (col == row)
-					d1 += arr[col][row];
+				if (row == col)
+					d1 += arr[row][col];
 
 				// finding sum of secondary diagonal
-				if (col == n - row - 1)
-					d2 += arr[col][row];
+				if (row == n - col - 1)
+					d2 += arr[row][col];
 			}
 		}
 
